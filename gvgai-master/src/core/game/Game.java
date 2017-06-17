@@ -1176,16 +1176,6 @@ public abstract class Game {
 		isEnded = true;
 	}
 
-
-	/**
-	 * Aborts a game. Game is lost and game over.
-	 */
-	public void abort() {
-		isEnded = true;
-	}
-
-
-
 	/**
 	 * Method to create the array of avatars from the sprites.
 	 */

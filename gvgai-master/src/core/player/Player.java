@@ -83,7 +83,6 @@ public abstract class Player {
      */
     public abstract Types.ACTIONS act(StateObservationMulti stateObs, ElapsedCpuTimer elapsedTimer);
 
-
     /**
      * Function called when the game is over. This method must finish before CompetitionParameters.TEAR_DOWN_TIME,
      *  or the agent will be DISQUALIFIED

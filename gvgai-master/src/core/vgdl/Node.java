@@ -47,9 +47,8 @@ public class Node
      * @param contentLine string with the node information
      * @param indent indent level of this node, to determine its place on the tree.
      * @param parent indicates the parent of the new node, if any.
-     * @throws Exception 
      */
-    public Node(String contentLine, int indent, Node parent, int set) throws Exception
+    public Node(String contentLine, int indent, Node parent, int set)
     {
         children = new ArrayList<Node>();
         this.content = createContent(contentLine, set);
@@ -60,7 +59,7 @@ public class Node
             parent.insert(this);
     }
 
-    public Node(String contentLine, int indent, Node parent, int set, int lineNumber) throws Exception {
+    public Node(String contentLine, int indent, Node parent, int set, int lineNumber) {
         children = new ArrayList<Node>();
         this.content = createContent(contentLine, set);
         this.indent = indent;
@@ -76,9 +75,8 @@ public class Node
      * @param line line in VGDL format.
      * @param set indicates the set the line belongs to (see Types.java).
      * @return the line parsed in a content object.
-     * @throws Exception 
      */
-    private Content createContent(String line, int set) throws Exception
+    private Content createContent(String line, int set)
     {
         line = Utils.formatString(line);
         switch(set){

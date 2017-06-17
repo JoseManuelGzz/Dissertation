@@ -6,6 +6,7 @@ import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
+import tracks.multiPlayer.opponentModels.Alphabeta;
 
 public class SingleTreeNode
 {
@@ -123,8 +124,19 @@ public class SingleTreeNode
         acts[id] = actions[id][bestAction];
 
         //get actions available to the opponent and assume they will do a random action
+
         Types.ACTIONS[] oppActions = actions[oppID];
-        acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+
+
+        Alphabeta alphabeta = new Alphabeta(oppID);
+        acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
+
+        //System.out.println("1 = " + acts[oppID]);
+        //acts[oppID] = actions[oppID][bestAction];
+        //System.out.println("2 = " + acts[oppID]);
+
+
+        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 
         state.advance(acts);
 
@@ -172,7 +184,11 @@ public class SingleTreeNode
 
         //get actions available to the opponent and assume they will do a random action
         Types.ACTIONS[] oppActions = actions[oppID];
-        acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+
+        Alphabeta alphabeta = new Alphabeta(oppID);
+        acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
+
+        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 
         state.advance(acts);
 

@@ -71,17 +71,6 @@ public class CompetitionParameters
     public static final boolean OS_WIN = System.getProperty("os.name").contains("Windows");
 
     /**
-     * Use sockets for Learning track connection?
-     * (NOTE: Client code should also be configured to use sockets - or not).
-     */
-    public static final boolean USE_SOCKETS = true;
-
-    /**
-     * Milliseconds allowed per controller action.
-     */
-    public static final int SOCKET_PORT = 3000;
-
-    /**
      * Indicates if the overspend should be taken into account or not.
      *  Time limits are WALL TIME on Windows, because CPU TIME is not accurate enough
      *  at the level of milliseconds on this OS.
@@ -92,11 +81,6 @@ public class CompetitionParameters
      * Max number of evaluations that can be done
      */
     public static final int OPTIMIZATION_EVALUATION = 5;
-    
-    /**
-     * Max number of warning then the system consider the game unplayable.
-     */
-    public static final int MAX_ALLOWED_WARNINGS = 25;
     
     /**
      * Path to sprite images.
@@ -134,7 +118,7 @@ public class CompetitionParameters
      * Close the open window when you die or win
      */
     public static boolean killWindowOnEnd = true;
-
+    
     /**
      * Java Warm-up time before starting the game.
      */
