@@ -1,14 +1,12 @@
-package tracks.multiPlayer.advanced.sampleMCTS;
-
-import java.util.Random;
+package tracks.multiPlayer.advanced.fallibleMCTS;
 
 import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
-import tracks.multiPlayer.opponentModels.Alphabeta;
 import tracks.multiPlayer.opponentModels.Fallible;
-import tracks.multiPlayer.opponentModels.Average;
+
+import java.util.Random;
 
 public class SingleTreeNode
 {
@@ -129,14 +127,9 @@ public class SingleTreeNode
 
         Types.ACTIONS[] oppActions = actions[oppID];
 
-        Average average = new Average(oppID);
-        acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
 
-        //Fallible fallible = new Fallible(oppID);
-        //acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
-
-        //Alphabeta alphabeta = new Alphabeta(oppID);
-        //acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
+        Fallible fallible = new Fallible(oppID);
+        acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
 
         //System.out.println("1 = " + acts[oppID]);
         //acts[oppID] = actions[oppID][bestAction];
@@ -192,14 +185,8 @@ public class SingleTreeNode
         //get actions available to the opponent and assume they will do a random action
         Types.ACTIONS[] oppActions = actions[oppID];
 
-        Average average = new Average(oppID);
-        acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
-
-        //Fallible fallible = new Fallible(oppID);
-        //acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
-
-        //Alphabeta alphabeta = new Alphabeta(oppID);
-        //acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
+        Fallible fallible = new Fallible(oppID);
+        acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
 
         //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 

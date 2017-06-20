@@ -22,6 +22,9 @@ public class TestMultiPlayer {
 
 	String humanController = "tracks.multiPlayer.tools.human.Agent";
 
+	String alphabetaMCTS = "tracks.multiPlayer.advanced.alphabetaMCTS.Agent";
+	String fallibleMCTS = "tracks.multiPlayer.advanced.fallibleMCTS.Agent";
+
 
 	// Set here the tracks used in the games (need 2 separated by space).
 	String controllers = sampleMCTSController + " " + randomController;
