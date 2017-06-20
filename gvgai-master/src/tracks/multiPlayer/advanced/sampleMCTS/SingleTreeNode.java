@@ -9,6 +9,10 @@ import tools.Utils;
 import tracks.multiPlayer.opponentModels.Alphabeta;
 import tracks.multiPlayer.opponentModels.Fallible;
 import tracks.multiPlayer.opponentModels.Average;
+import tracks.multiPlayer.opponentModels.SameAction;
+import tracks.multiPlayer.opponentModels.Mirror;
+
+import javax.sound.midi.SysexMessage;
 
 public class SingleTreeNode
 {
@@ -129,12 +133,23 @@ public class SingleTreeNode
 
         Types.ACTIONS[] oppActions = actions[oppID];
 
-        Average average = new Average(oppID);
-        acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
+        //MIRROR
+        Mirror mirror = new Mirror(oppID, bestAction);
+        acts[oppID] = mirror.getOpponentAction(actions);
 
+        //SAMEACTION
+        //SameAction sameAction = new SameAction(oppID, bestAction);
+        //acts[oppID] = sameAction.getOpponentAction(actions);
+
+        //AVERAGE
+        //Average average = new Average(oppID);
+        //acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
+
+        //FALLIBLE
         //Fallible fallible = new Fallible(oppID);
         //acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
 
+        //ALPHABETA
         //Alphabeta alphabeta = new Alphabeta(oppID);
         //acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
 
@@ -192,12 +207,23 @@ public class SingleTreeNode
         //get actions available to the opponent and assume they will do a random action
         Types.ACTIONS[] oppActions = actions[oppID];
 
-        Average average = new Average(oppID);
-        acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
+        //MIRROR
+        Mirror mirror = new Mirror(oppID, selected.childIdx);
+        acts[oppID] = mirror.getOpponentAction(actions);
 
+        //SAMEACTION
+        //SameAction sameAction = new SameAction(oppID, selected.childIdx);
+        //acts[oppID] = sameAction.getOpponentAction(actions);
+
+        //AVERAGE
+        //Average average = new Average(oppID);
+        //acts[oppID] = average.getOpponentAction(state, this.epsilon, this.m_rnd);
+
+        //FALLIBLE
         //Fallible fallible = new Fallible(oppID);
         //acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
 
+        //ALPHABETA
         //Alphabeta alphabeta = new Alphabeta(oppID);
         //acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
 

@@ -39,17 +39,13 @@ public class Alphabeta
             double Q = heuristic.evaluateState(stCopy, oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());
 
-            //System.out.println(opAction + " Q: " + Q);
-
             if (Q > maxQ) {
                 maxQ = Q;
                 bestAction = opAction;
             }
 
         }
-        //System.out.println("Best Action: " + bestAction);
 
         return bestAction;
-        //return actions[oppID][bestAction];
     }
 }

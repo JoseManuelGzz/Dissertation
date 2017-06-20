@@ -13,35 +13,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/Agent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleMCTSPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleMCTSPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Alphabeta.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="53" column="5" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+            <state relative-caret-position="952">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +40,20 @@
       <file leaf-file-name="SingleTreeNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2604">
-              <caret line="132" column="81" lean-forward="false" selection-start-line="132" selection-start-column="81" selection-end-line="132" selection-end-column="81" />
+            <state relative-caret-position="357">
+              <caret line="137" column="56" lean-forward="false" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mirror.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Mirror.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,7 +66,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +78,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1155">
               <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,9 +90,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3801">
               <caret line="187" column="20" lean-forward="false" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,18 +100,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="924">
               <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Average.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Average.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#427#435#0" expanded="true" />
+                <element signature="e#507#522#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Average.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Average.java">
+      <file leaf-file-name="SameAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/SameAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,9 +172,11 @@
         <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/fallibleMCTS/SingleTreeNode.java" />
         <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/TestMultiPlayer.java" />
         <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Fallible.java" />
-        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java" />
-        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleTreeNode.java" />
         <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Average.java" />
+        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/SameAction.java" />
+        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java" />
+        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Mirror.java" />
+        <option value="$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleTreeNode.java" />
       </list>
     </option>
   </component>
@@ -869,12 +875,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938188" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5532382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55292124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -891,7 +898,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938188" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -908,30 +914,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleMCTSPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="53" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -960,7 +948,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -968,7 +958,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -976,9 +968,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3801">
           <caret line="187" column="20" lean-forward="false" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,9 +976,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,6 +986,8 @@
           <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#427#435#0" expanded="true" />
+            <element signature="e#507#522#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,7 +996,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1014,7 +1006,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,8 +1045,6 @@
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1061,7 +1053,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,7 +1063,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,8 +1075,6 @@
           <caret line="20" column="74" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1110,7 +1104,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1118,7 +1114,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,7 +1145,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,7 +1155,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,7 +1252,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,7 +1262,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,7 +1272,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1274,7 +1282,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1282,31 +1292,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3801">
           <caret line="187" column="20" lean-forward="false" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="53" column="5" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2604">
-          <caret line="132" column="81" lean-forward="false" selection-start-line="132" selection-start-column="81" selection-end-line="132" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,6 +1310,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Alphabeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1332,8 +1326,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Average.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="688">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#427#435#0" expanded="true" />
+            <element signature="e#507#522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/Mirror.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/advanced/sampleMCTS/SingleTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="137" column="56" lean-forward="false" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvgai-master/src/tracks/multiPlayer/opponentModels/SameAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
