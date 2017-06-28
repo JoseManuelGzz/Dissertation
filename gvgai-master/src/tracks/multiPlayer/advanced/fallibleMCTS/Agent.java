@@ -4,7 +4,7 @@ import core.game.StateObservationMulti;
 import core.player.AbstractMultiPlayer;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
-import tracks.multiPlayer.advanced.sampleMCTS.SingleMCTSPlayer;
+import tracks.multiPlayer.advanced.fallibleMCTS.SingleMCTSPlayer;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,6 +21,7 @@ public class Agent extends AbstractMultiPlayer {
     public int[] NUM_ACTIONS;
     public Types.ACTIONS[][] actions;
     public int id, oppID, no_players;
+    public int advanceCont = 0;
 
     protected SingleMCTSPlayer mctsPlayer;
 

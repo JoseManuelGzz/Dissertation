@@ -3,7 +3,7 @@ package tracks.multiPlayer.advanced.fallibleMCTS;
 import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
-import tracks.multiPlayer.advanced.sampleMCTS.SingleTreeNode;
+import tracks.multiPlayer.advanced.fallibleMCTS.SingleTreeNode;
 
 import java.util.Random;
 
@@ -62,6 +62,7 @@ public class SingleMCTSPlayer
     public int run(ElapsedCpuTimer elapsedTimer)
     {
         //Do the search within the available time.
+        //PASS THE COUNTER FROM AGENT
         m_root.mctsSearch(elapsedTimer);
 
         //Determine the best action to take and return it.

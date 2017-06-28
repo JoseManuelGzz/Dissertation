@@ -86,7 +86,7 @@ public class SingleTreeNode
             remaining = elapsedTimer.remainingTimeMillis();
         }
 
-        System.out.println("-- " + numIters + " -- ( " + avgTimeTaken + ")");
+        //System.out.println("-- " + numIters + " -- ( " + avgTimeTaken + ")");
     }
 
     public SingleTreeNode treePolicy(StateObservationMulti state) {
@@ -131,11 +131,9 @@ public class SingleTreeNode
 
         //get actions available to the opponent and assume they will do a random action
 
-        Types.ACTIONS[] oppActions = actions[oppID];
-
         //MIRROR
-        Mirror mirror = new Mirror(oppID, bestAction);
-        acts[oppID] = mirror.getOpponentAction(actions);
+        //Mirror mirror = new Mirror(oppID, bestAction);
+        //acts[oppID] = mirror.getOpponentAction(actions);
 
         //SAMEACTION
         //SameAction sameAction = new SameAction(oppID, bestAction);
@@ -157,8 +155,8 @@ public class SingleTreeNode
         //acts[oppID] = actions[oppID][bestAction];
         //System.out.println("2 = " + acts[oppID]);
 
-
-        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+        Types.ACTIONS[] oppActions = actions[oppID];
+        acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 
         state.advance(acts);
 
@@ -205,11 +203,10 @@ public class SingleTreeNode
         acts[id] = actions[id][selected.childIdx];
 
         //get actions available to the opponent and assume they will do a random action
-        Types.ACTIONS[] oppActions = actions[oppID];
 
         //MIRROR
-        Mirror mirror = new Mirror(oppID, selected.childIdx);
-        acts[oppID] = mirror.getOpponentAction(actions);
+        //Mirror mirror = new Mirror(oppID, selected.childIdx);
+        //acts[oppID] = mirror.getOpponentAction(actions);
 
         //SAMEACTION
         //SameAction sameAction = new SameAction(oppID, selected.childIdx);
@@ -227,7 +224,8 @@ public class SingleTreeNode
         //Alphabeta alphabeta = new Alphabeta(oppID);
         //acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
 
-        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+        Types.ACTIONS[] oppActions = actions[oppID];
+        acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 
         state.advance(acts);
 

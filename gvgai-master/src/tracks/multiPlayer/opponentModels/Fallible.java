@@ -29,7 +29,7 @@ public class Fallible {
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
 
-        System.out.println("Fallible");
+        //System.out.println("Fallible");
 
         this.worstAction = null;
         this.bestAction = null;
@@ -38,23 +38,25 @@ public class Fallible {
 
         SimpleStateHeuristic heuristic =  new SimpleStateHeuristic(stateObs);
 
-        for(Types.ACTIONS opAction : stateObs.getAvailableActions(oppID)) {
+        for(Types.ACTIONS opAction : stateObs.getAvailableActions(this.oppID)) {
 
             StateObservationMulti stCopy = stateObs.copy();
 
-            double Q = heuristic.evaluateState(stCopy, oppID);
+            stCopy.advance(opAction);
+
+            double Q = heuristic.evaluateState(stCopy, this.oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());
 
             //System.out.println(opAction + " Q: " + Q);
 
-            if (Q < minQ) {
-                minQ = Q;
-                worstAction = opAction;
+            if (Q < this.minQ) {
+                this.minQ = Q;
+                this.worstAction = opAction;
             }
 
             if (Q > maxQ) {
-                maxQ = Q;
-                bestAction = opAction;
+                this.maxQ = Q;
+                this.bestAction = opAction;
             }
 
         }
@@ -62,16 +64,16 @@ public class Fallible {
         //System.out.println("Worst Action: " + worstAction);
 
         // Roll a random number between 0 and 10
-        rnd = new Random().nextInt(10);
+        this.rnd = new Random().nextInt(10);
 
         // Return the best action with a big margin
-        if (rnd <= threshold) {
-            return bestAction;
+        if (this.rnd <= this.threshold) {
+            return this.bestAction;
         }
 
         // Return the worst action occasionally
         else {
-            return worstAction;
+            return this.worstAction;
         }
 
     }

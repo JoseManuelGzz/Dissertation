@@ -36,6 +36,8 @@ public class Average {
 
             StateObservationMulti stCopy = stateObs.copy();
 
+            stCopy.advance(opAction);
+
             double Q = heuristic.evaluateState(stCopy, oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());
 

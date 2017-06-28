@@ -25,27 +25,29 @@ public class Alphabeta
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
 
-        System.out.println("Alphabeta");
+        //System.out.println("Alphabeta");
 
         this.bestAction = null;
         this.maxQ = Double.NEGATIVE_INFINITY;
 
         SimpleStateHeuristic heuristic =  new SimpleStateHeuristic(stateObs);
 
-        for(Types.ACTIONS opAction : stateObs.getAvailableActions(oppID)) {
+        for(Types.ACTIONS opAction : stateObs.getAvailableActions(this.oppID)) {
 
             StateObservationMulti stCopy = stateObs.copy();
 
-            double Q = heuristic.evaluateState(stCopy, oppID);
+            stCopy.advance(opAction);
+
+            double Q = heuristic.evaluateState(stCopy, this.oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());
 
-            if (Q > maxQ) {
-                maxQ = Q;
-                bestAction = opAction;
+            if (Q > this.maxQ) {
+                this.maxQ = Q;
+                this.bestAction = opAction;
             }
 
         }
 
-        return bestAction;
+        return this.bestAction;
     }
 }
