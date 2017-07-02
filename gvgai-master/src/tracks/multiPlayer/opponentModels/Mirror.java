@@ -24,7 +24,7 @@ public class Mirror {
 
         Types.ACTIONS mirroredAction = null;
 
-        System.out.println("Mirror");
+        //System.out.println("Mirror");
 
         if (actions[this.oppID][this.bestAction] == Types.ACTIONS.ACTION_DOWN) {
             mirroredAction = Types.ACTIONS.ACTION_UP;

@@ -4,7 +4,7 @@ import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
-import tracks.multiPlayer.opponentModels.Minimum;
+import tracks.multiPlayer.opponentModels.Fallible;
 
 import java.util.Random;
 
@@ -30,6 +30,7 @@ public class SingleTreeNode
     public int[] NUM_ACTIONS;
     public Types.ACTIONS[][] actions;
     public int id, oppID, no_players;
+    public int advanceCounter = 0;
 
     public StateObservationMulti rootState;
 
@@ -124,10 +125,14 @@ public class SingleTreeNode
         acts[id] = actions[id][bestAction];
 
         //get actions available to the opponent and assume they will do a random action
-        Minimum minimum = new Minimum(oppID);
-        acts[oppID] = minimum.getOpponentAction(state, this.epsilon, this.m_rnd);
+        Fallible fallible = new Fallible(oppID);
+        acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
+        this.advanceCounter += fallible.advanceCounter;
+        //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
+        this.advanceCounter += 1;
+        //increaseAdvanceCounter();
 
         SingleTreeNode tn = new SingleTreeNode(this,bestAction,this.m_rnd, id, oppID, no_players, NUM_ACTIONS, actions);
         children[bestAction] = tn;
@@ -172,10 +177,13 @@ public class SingleTreeNode
         acts[id] = actions[id][selected.childIdx];
 
         //get actions available to the opponent and assume they will do a random action
-        Minimum minimum = new Minimum(oppID);
-        acts[oppID] = minimum.getOpponentAction(state, this.epsilon, this.m_rnd);
+        Fallible fallible = new Fallible(oppID);
+        acts[oppID] = fallible.getOpponentAction(state, this.epsilon, this.m_rnd);
+        this.advanceCounter += fallible.advanceCounter;
+        //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
+        this.advanceCounter += 1;
 
         return selected;
     }
@@ -194,6 +202,7 @@ public class SingleTreeNode
             }
             state.advance(acts);
             thisDepth++;
+            this.advanceCounter += 1;
         }
 
 
@@ -329,5 +338,17 @@ public class SingleTreeNode
         }
 
         return false;
+    }
+
+    public void increaseAdvanceCounter() {
+        this.advanceCounter = this.advanceCounter + 1;
+    }
+
+    public int getAdvanceCounter() {
+        return this.advanceCounter;
+    }
+
+    public void setAdvanceCounter(int amount) {
+        this.advanceCounter = this.advanceCounter + amount;
     }
 }

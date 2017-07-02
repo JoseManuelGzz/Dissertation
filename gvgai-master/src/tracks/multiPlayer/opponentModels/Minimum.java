@@ -15,9 +15,11 @@ public class Minimum {
     private int oppID;
     private Types.ACTIONS bestAction;
     private double minQ;
+    public int advanceCounter;
 
     public Minimum(int oppID) {
         this.oppID = oppID;
+        this.advanceCounter = 0;
     }
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
@@ -26,6 +28,7 @@ public class Minimum {
 
         this.bestAction = null;
         this.minQ = Double.POSITIVE_INFINITY;
+        this.advanceCounter = 0;
 
         SimpleStateHeuristic heuristic = new SimpleStateHeuristic(stateObs);
 
@@ -34,6 +37,7 @@ public class Minimum {
             StateObservationMulti stCopy = stateObs.copy();
 
             stCopy.advance(opAction);
+            this.advanceCounter += 1;
 
             double Q = heuristic.evaluateState(stCopy, this.oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());

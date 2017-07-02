@@ -24,10 +24,15 @@ public class TestMultiPlayer {
 
 	String alphabetaMCTS = "tracks.multiPlayer.advanced.alphabetaMCTS.Agent";
 	String fallibleMCTS = "tracks.multiPlayer.advanced.fallibleMCTS.Agent";
+	String averageMCTS = "tracks.multiPlayer.advanced.averageMCTS.Agent";
+	String minimumMCTS = "tracks.multiPlayer.advanced.minimumMCTS.Agent";
+	String mirrorMCTS = "tracks.multiPlayer.advanced.mirrorMCTS.Agent";
+	String sameactionMCTS = "tracks.multiPlayer.advanced.sameactionMCTS.Agent";
+	String probabilisticMCTS = "tracks.multiPlayer.advanced.probabilisticMCTS.Agent";
 
 
 	// Set here the tracks used in the games (need 2 separated by space).
-	String controllers = fallibleMCTS + " " + sampleMCTSController;
+	String controllers = sampleMCTSController + " " + probabilisticMCTS;
 	// String tracks = sampleMCTSController + " " + sampleMCTSController;
 
 	// Available games:
@@ -43,7 +48,6 @@ public class TestMultiPlayer {
 		"rivalry", "romeoNjuliet", "samaritan", "sokoban", "steeplechase", // 25-29
 		"teamescape", "thebridge", "trainride", "treasuremap", "tron", // 30-34
 		"upgrade-x", "uphigh", "warzone", "watchout", "wheelme" }; // 35-39
-
 
 	// Other settings
 	boolean visuals = true;
@@ -81,7 +85,7 @@ public class TestMultiPlayer {
 //	}
 
 	 // 5. This plays N games, in the first L levels, M times each. Actions to file optional (set saveActions to true).
-	 int N = 5, L = 5, M = 5;
+	 int N = 5, L = 5, M = 1;
 	 boolean saveActions = true;
 	 String[] levels = new String[L];
 	 String[] actionFiles = new String[L*M];

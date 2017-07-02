@@ -21,16 +21,19 @@ public class Fallible {
     private double minQ;
     private double maxQ;
     private double threshold;
+    public int advanceCounter;
 
     public Fallible(int oppID) {
         this.oppID = oppID;
         this.threshold = 8;
+        this.advanceCounter = 0;
     }
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
 
         //System.out.println("Fallible");
 
+        this.advanceCounter = 0;
         this.worstAction = null;
         this.bestAction = null;
         this.minQ = Double.POSITIVE_INFINITY;
@@ -43,6 +46,7 @@ public class Fallible {
             StateObservationMulti stCopy = stateObs.copy();
 
             stCopy.advance(opAction);
+            this.advanceCounter += 1;
 
             double Q = heuristic.evaluateState(stCopy, this.oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());

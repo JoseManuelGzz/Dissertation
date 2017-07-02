@@ -1,18 +1,15 @@
 package tracks.multiPlayer.advanced.alphabetaMCTS;
 
+/**
+ * Created by jmanu on 7/2/2017.
+ */
 import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
-import tracks.multiPlayer.advanced.sampleMCTS.SingleTreeNode;
+import tracks.multiPlayer.advanced.alphabetaMCTS.SingleTreeNode;
 
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Diego
- * Date: 07/11/13
- * Time: 17:13
- */
 public class SingleMCTSPlayer
 {
 
@@ -30,6 +27,7 @@ public class SingleMCTSPlayer
      */
     public Random m_rnd;
     public int id, oppID, no_players;
+    public int advanceCounter = 0;
 
 
     public SingleMCTSPlayer(Random a_rnd, int[] NUM_ACTIONS, Types.ACTIONS[][] actions, int id, int oppID, int no_players)
@@ -62,12 +60,27 @@ public class SingleMCTSPlayer
     public int run(ElapsedCpuTimer elapsedTimer)
     {
         //Do the search within the available time.
+        //PASS THE COUNTER FROM AGENT
         m_root.mctsSearch(elapsedTimer);
 
         //Determine the best action to take and return it.
         int action = m_root.mostVisitedAction();
         //int action = m_root.bestAction();
+
+        this.advanceCounter += m_root.getAdvanceCounter();
+
         return action;
+    }
+
+    public int getAdvanceCounter() {
+        return this.advanceCounter;
+    }
+
+    public void resetAdvanceCounter() {
+        if (this.advanceCounter >= 900) {
+            this.advanceCounter = 0;
+            this.m_root.advanceCounter = 0;
+        }
     }
 
 }

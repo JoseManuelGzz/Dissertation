@@ -9,19 +9,11 @@ import tracks.multiPlayer.advanced.fallibleMCTS.SingleMCTSPlayer;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: ssamot
- * Date: 14/11/13
- * Time: 21:45
- * This is an implementation of MCTS UCT
- */
 public class Agent extends AbstractMultiPlayer {
 
     public int[] NUM_ACTIONS;
     public Types.ACTIONS[][] actions;
     public int id, oppID, no_players;
-    public int advanceCont = 0;
 
     protected SingleMCTSPlayer mctsPlayer;
 
@@ -72,11 +64,20 @@ public class Agent extends AbstractMultiPlayer {
      */
     public Types.ACTIONS act(StateObservationMulti stateObs, ElapsedCpuTimer elapsedTimer) {
 
+        int action = 0;
+
         //Set the state observation object as the new root of the tree.
         mctsPlayer.init(stateObs);
 
-        //Determine the action using MCTS...
-        int action = mctsPlayer.run(elapsedTimer);
+        do {
+            //Determine the action using MCTS...
+            action = mctsPlayer.run(elapsedTimer);
+
+            //System.out.println(mctsPlayer.getAdvanceCounter());
+
+        } while(mctsPlayer.getAdvanceCounter() < 900);
+
+        mctsPlayer.resetAdvanceCounter();
 
         //... and return it.
         return actions[id][action];

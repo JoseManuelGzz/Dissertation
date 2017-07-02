@@ -158,6 +158,7 @@ public class SingleTreeNode
         Types.ACTIONS[] oppActions = actions[oppID];
         acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
 
+
         state.advance(acts);
 
         SingleTreeNode tn = new SingleTreeNode(this,bestAction,this.m_rnd, id, oppID, no_players, NUM_ACTIONS, actions);

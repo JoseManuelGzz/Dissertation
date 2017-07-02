@@ -1,5 +1,9 @@
 package tracks.multiPlayer.advanced.alphabetaMCTS;
 
+/**
+ * Created by jmanu on 7/2/2017.
+ */
+
 import core.game.StateObservationMulti;
 import ontology.Types;
 import tools.ElapsedCpuTimer;
@@ -30,6 +34,7 @@ public class SingleTreeNode
     public int[] NUM_ACTIONS;
     public Types.ACTIONS[][] actions;
     public int id, oppID, no_players;
+    public int advanceCounter = 0;
 
     public StateObservationMulti rootState;
 
@@ -64,7 +69,7 @@ public class SingleTreeNode
 
         int remainingLimit = 5;
         while(remaining > 2*avgTimeTaken && remaining > remainingLimit){
-        //while(numIters < Agent.MCTS_ITERATIONS){
+            //while(numIters < Agent.MCTS_ITERATIONS){
 
             StateObservationMulti state = rootState.copy();
 
@@ -80,7 +85,7 @@ public class SingleTreeNode
             remaining = elapsedTimer.remainingTimeMillis();
         }
 
-        System.out.println("-- " + numIters + " -- ( " + avgTimeTaken + ")");
+        //System.out.println("-- " + numIters + " -- ( " + avgTimeTaken + ")");
     }
 
     public SingleTreeNode treePolicy(StateObservationMulti state) {
@@ -124,21 +129,14 @@ public class SingleTreeNode
         acts[id] = actions[id][bestAction];
 
         //get actions available to the opponent and assume they will do a random action
-
-        Types.ACTIONS[] oppActions = actions[oppID];
-
-
         Alphabeta alphabeta = new Alphabeta(oppID);
         acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
-
-        //System.out.println("1 = " + acts[oppID]);
-        //acts[oppID] = actions[oppID][bestAction];
-        //System.out.println("2 = " + acts[oppID]);
-
-
-        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+        this.advanceCounter += alphabeta.advanceCounter;
+        //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
+        this.advanceCounter += 1;
+        //increaseAdvanceCounter();
 
         SingleTreeNode tn = new SingleTreeNode(this,bestAction,this.m_rnd, id, oppID, no_players, NUM_ACTIONS, actions);
         children[bestAction] = tn;
@@ -171,7 +169,7 @@ public class SingleTreeNode
         if (selected == null)
         {
             throw new RuntimeException("Warning! returning null: " + bestValue + " : " + this.children.length + " " +
-            + bounds[0] + " " + bounds[1]);
+                    + bounds[0] + " " + bounds[1]);
         }
 
         //Roll the state:
@@ -183,14 +181,13 @@ public class SingleTreeNode
         acts[id] = actions[id][selected.childIdx];
 
         //get actions available to the opponent and assume they will do a random action
-        Types.ACTIONS[] oppActions = actions[oppID];
-
         Alphabeta alphabeta = new Alphabeta(oppID);
         acts[oppID] = alphabeta.getOpponentAction(state, this.epsilon, this.m_rnd);
-
-        //acts[oppID] = oppActions[new Random().nextInt(oppActions.length)];
+        this.advanceCounter += alphabeta.advanceCounter;
+        //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
+        this.advanceCounter += 1;
 
         return selected;
     }
@@ -209,6 +206,7 @@ public class SingleTreeNode
             }
             state.advance(acts);
             thisDepth++;
+            this.advanceCounter += 1;
         }
 
 
@@ -345,4 +343,17 @@ public class SingleTreeNode
 
         return false;
     }
+
+    public void increaseAdvanceCounter() {
+        this.advanceCounter = this.advanceCounter + 1;
+    }
+
+    public int getAdvanceCounter() {
+        return this.advanceCounter;
+    }
+
+    public void setAdvanceCounter(int amount) {
+        this.advanceCounter = this.advanceCounter + amount;
+    }
 }
+

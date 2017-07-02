@@ -18,9 +18,11 @@ public class Alphabeta
     private int oppID;
     private Types.ACTIONS bestAction;
     private double maxQ;
+    public int advanceCounter;
 
     public Alphabeta(int oppID) {
         this.oppID = oppID;
+        this.advanceCounter = 0;
     }
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
@@ -29,6 +31,7 @@ public class Alphabeta
 
         this.bestAction = null;
         this.maxQ = Double.NEGATIVE_INFINITY;
+        this.advanceCounter = 0;
 
         SimpleStateHeuristic heuristic =  new SimpleStateHeuristic(stateObs);
 
@@ -37,6 +40,7 @@ public class Alphabeta
             StateObservationMulti stCopy = stateObs.copy();
 
             stCopy.advance(opAction);
+            this.advanceCounter += 1;
 
             double Q = heuristic.evaluateState(stCopy, this.oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());

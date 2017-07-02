@@ -17,18 +17,21 @@ public class Average {
     private Types.ACTIONS bestAction;
     private ArrayList<Double> QValues = new ArrayList<Double>();
     private ArrayList<Types.ACTIONS> opponentActions = new ArrayList<Types.ACTIONS>();
+    public int advanceCounter;
 
     public Average(int oppID) {
         this.oppID = oppID;
+        this.advanceCounter = 0;
     }
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
 
-        System.out.println("Average");
+        //System.out.println("Average");
 
         this.bestAction = null;
         int cont = 0;
         double avgQ = 0.0;
+        this.advanceCounter = 0;
 
         SimpleStateHeuristic heuristic =  new SimpleStateHeuristic(stateObs);
 
@@ -37,6 +40,7 @@ public class Average {
             StateObservationMulti stCopy = stateObs.copy();
 
             stCopy.advance(opAction);
+            this.advanceCounter += 1;
 
             double Q = heuristic.evaluateState(stCopy, oppID);
             Q = Utils.noise(Q, epsilon, m_rnd.nextDouble());

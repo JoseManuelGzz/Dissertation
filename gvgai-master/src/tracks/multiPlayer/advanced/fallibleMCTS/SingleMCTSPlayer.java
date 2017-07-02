@@ -7,12 +7,6 @@ import tracks.multiPlayer.advanced.fallibleMCTS.SingleTreeNode;
 
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Diego
- * Date: 07/11/13
- * Time: 17:13
- */
 public class SingleMCTSPlayer
 {
 
@@ -30,6 +24,7 @@ public class SingleMCTSPlayer
      */
     public Random m_rnd;
     public int id, oppID, no_players;
+    public int advanceCounter = 0;
 
 
     public SingleMCTSPlayer(Random a_rnd, int[] NUM_ACTIONS, Types.ACTIONS[][] actions, int id, int oppID, int no_players)
@@ -68,7 +63,21 @@ public class SingleMCTSPlayer
         //Determine the best action to take and return it.
         int action = m_root.mostVisitedAction();
         //int action = m_root.bestAction();
+
+        this.advanceCounter += m_root.getAdvanceCounter();
+
         return action;
+    }
+
+    public int getAdvanceCounter() {
+        return this.advanceCounter;
+    }
+
+    public void resetAdvanceCounter() {
+        if (this.advanceCounter >= 900) {
+            this.advanceCounter = 0;
+            this.m_root.advanceCounter = 0;
+        }
     }
 
 }
