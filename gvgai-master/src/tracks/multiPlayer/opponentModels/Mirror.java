@@ -20,26 +20,26 @@ public class Mirror {
         this.bestAction = bestAction;
     }
 
-    public Types.ACTIONS getOpponentAction(Types.ACTIONS actions[][]) {
+    public Types.ACTIONS getOpponentAction(Types.ACTIONS action) {
 
         Types.ACTIONS mirroredAction = null;
 
         //System.out.println("Mirror");
 
-        if (actions[this.oppID][this.bestAction] == Types.ACTIONS.ACTION_DOWN) {
+        if (action == Types.ACTIONS.ACTION_DOWN) {
             mirroredAction = Types.ACTIONS.ACTION_UP;
         }
-        else if (actions[this.oppID][this.bestAction] == Types.ACTIONS.ACTION_UP) {
+        else if (action == Types.ACTIONS.ACTION_UP) {
             mirroredAction = Types.ACTIONS.ACTION_DOWN;
         }
-        else if (actions[this.oppID][this.bestAction] == Types.ACTIONS.ACTION_LEFT) {
+        else if (action == Types.ACTIONS.ACTION_LEFT) {
             mirroredAction = Types.ACTIONS.ACTION_RIGHT;
         }
-        else if (actions[this.oppID][this.bestAction] == Types.ACTIONS.ACTION_RIGHT) {
+        else if (action == Types.ACTIONS.ACTION_RIGHT) {
             mirroredAction = Types.ACTIONS.ACTION_LEFT;
         }
         else {
-            mirroredAction = actions[this.oppID][this.bestAction];;
+            mirroredAction = action;;
         }
 
         return mirroredAction;

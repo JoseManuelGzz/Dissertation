@@ -292,7 +292,7 @@ public class SingleTreeNode
 
         if (selected == -1)
         {
-            System.out.println("Unexpected selection!");
+            //System.out.println("Unexpected selection!");
             selected = 0;
         }else if(allEqual)
         {
@@ -322,7 +322,7 @@ public class SingleTreeNode
 
         if (selected == -1)
         {
-            System.out.println("Unexpected selection!");
+            //System.out.println("Unexpected selection!");
             selected = 0;
         }
 

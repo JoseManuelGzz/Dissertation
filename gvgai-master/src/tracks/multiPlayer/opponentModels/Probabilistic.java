@@ -28,7 +28,7 @@ public class Probabilistic
 
     public Types.ACTIONS getOpponentAction(StateObservationMulti stateObs, double epsilon, Random m_rnd) {
 
-        System.out.println("Probabilistic");
+        //System.out.println("Probabilistic");
 
         this.bestAction = Types.ACTIONS.ACTION_DOWN;
         ArrayList<Integer> probActionGenerated = new ArrayList<Integer>();

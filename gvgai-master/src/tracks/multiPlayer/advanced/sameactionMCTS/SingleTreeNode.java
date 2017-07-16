@@ -128,8 +128,8 @@ public class SingleTreeNode
         acts[id] = actions[id][bestAction];
 
         //get actions available to the opponent and assume they will do a random action
-        SameAction sameAction = new SameAction(oppID, bestAction);
-        acts[oppID] = sameAction.getOpponentAction(actions);
+        SameAction sameAction = new SameAction(oppID);
+        acts[oppID] = sameAction.getOpponentAction(actions[id][bestAction]);
         //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
@@ -179,8 +179,8 @@ public class SingleTreeNode
         acts[id] = actions[id][selected.childIdx];
 
         //get actions available to the opponent and assume they will do a random action
-        SameAction sameAction = new SameAction(oppID, selected.childIdx);
-        acts[oppID] = sameAction.getOpponentAction(actions);
+        SameAction sameAction = new SameAction(oppID);
+        acts[oppID] = sameAction.getOpponentAction(actions[id][selected.childIdx]);
         //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
@@ -293,7 +293,7 @@ public class SingleTreeNode
 
         if (selected == -1)
         {
-            System.out.println("Unexpected selection!");
+            //System.out.println("Unexpected selection!");
             selected = 0;
         }else if(allEqual)
         {

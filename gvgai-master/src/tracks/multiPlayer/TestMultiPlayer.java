@@ -29,17 +29,27 @@ public class TestMultiPlayer {
 	String mirrorMCTS = "tracks.multiPlayer.advanced.mirrorMCTS.Agent";
 	String sameactionMCTS = "tracks.multiPlayer.advanced.sameactionMCTS.Agent";
 	String probabilisticMCTS = "tracks.multiPlayer.advanced.probabilisticMCTS.Agent";
-
+	String limitedbufferMCTS = "tracks.multiPlayer.advanced.limitedbufferMCTS.Agent";
+	String unlimitedbufferMCTS = "tracks.multiPlayer.advanced.unlimitedbufferMCTS.Agent";
 
 	// Set here the tracks used in the games (need 2 separated by space).
-	String controllers = sampleMCTSController + " " + probabilisticMCTS;
+	String controllers = limitedbufferMCTS + " " + sameactionMCTS;
 	// String tracks = sampleMCTSController + " " + sampleMCTSController;
 
 	// Available games:
 	String gamesPath = "gvgai-master/examples/2player/";
 	String games[] = new String[] {};
 
-	// All public games
+	// Training set 1
+	games = new String[] {"akkaarrh", "asteroids", "captureflag", "copsNrobbers", "gotcha",
+			"klax", "samaritan", "sokoban", "steeplechase", "tron"};
+
+	/*Training set 2
+	games = new String[] {"beekeeper", "bombergirl", "competesokoban", "donkeykong", "dragonattack",
+			"football", "minesweeper", "rivalry", "romeoNjuliet", "teamescape"};
+	*/
+
+	/* All public games
 	games = new String[] { "accelerator", "akkaarrh", "asteroids", "beekeeper", "bombergirl", // 0-4
 		"breedingdragons", "captureflag", "competesokoban", "copsNrobbers", "donkeykong", // 5-9
 		"dragonattack", "drowning", "egghunt", "fatty", "firetruck", // 10-14
@@ -48,6 +58,7 @@ public class TestMultiPlayer {
 		"rivalry", "romeoNjuliet", "samaritan", "sokoban", "steeplechase", // 25-29
 		"teamescape", "thebridge", "trainride", "treasuremap", "tron", // 30-34
 		"upgrade-x", "uphigh", "warzone", "watchout", "wheelme" }; // 35-39
+	*/
 
 	// Other settings
 	boolean visuals = true;
@@ -85,7 +96,7 @@ public class TestMultiPlayer {
 //	}
 
 	 // 5. This plays N games, in the first L levels, M times each. Actions to file optional (set saveActions to true).
-	 int N = 5, L = 5, M = 1;
+	 int N = 10, L = 5, M = 1;
 	 boolean saveActions = true;
 	 String[] levels = new String[L];
 	 String[] actionFiles = new String[L*M];

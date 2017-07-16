@@ -13,18 +13,18 @@ import java.util.Random;
 public class SameAction {
 
     private int oppID;
-    private int bestAction;
+    private Types.ACTIONS bestAction;
 
-    public SameAction(int oppID, int bestAction) {
+    public SameAction(int oppID) {
         this.oppID = oppID;
-        this.bestAction = bestAction;
     }
 
-    public Types.ACTIONS getOpponentAction(Types.ACTIONS actions[][]) {
+    public Types.ACTIONS getOpponentAction(Types.ACTIONS action) {
 
-        System.out.println("SameAction");
+        //System.out.println("SameAction");
+        this.bestAction = action;
 
-        return actions[this.oppID][this.bestAction];
+        return this.bestAction;
     }
 
 }

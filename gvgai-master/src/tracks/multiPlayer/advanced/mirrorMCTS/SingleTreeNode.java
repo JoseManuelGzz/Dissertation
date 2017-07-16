@@ -129,7 +129,7 @@ public class SingleTreeNode
 
         //get actions available to the opponent and assume they will do a random action
         Mirror mirror = new Mirror(oppID, bestAction);
-        acts[oppID] = mirror.getOpponentAction(actions);
+        acts[oppID] = mirror.getOpponentAction(actions[id][bestAction]);
         //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
@@ -180,7 +180,7 @@ public class SingleTreeNode
 
         //get actions available to the opponent and assume they will do a random action
         Mirror mirror = new Mirror(oppID, selected.childIdx);
-        acts[oppID] = mirror.getOpponentAction(actions);
+        acts[oppID] = mirror.getOpponentAction(actions[id][selected.childIdx]);
         //setAdvanceCounter(fallible.advanceCounter);
 
         state.advance(acts);
@@ -293,7 +293,7 @@ public class SingleTreeNode
 
         if (selected == -1)
         {
-            System.out.println("Unexpected selection!");
+            //System.out.println("Unexpected selection!");
             selected = 0;
         }else if(allEqual)
         {
